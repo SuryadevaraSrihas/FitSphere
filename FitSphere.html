@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FitSphere - Fitness Activity Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fitsphere.css">
+</head>
+<body>
+
+<header>
+    <h1>🏋️ FitSphere</h1>
+    <p>Your Daily Fitness Activity Tracker</p>
+</header>
+
+<section class="dashboard">
+    <div class="card">
+        <h3>Total Activities</h3>
+        <p id="totalActivities">0</p>
+    </div>
+    <div class="card">
+        <h3>Completed</h3>
+        <p id="completedActivities">0</p>
+    </div>
+    <div class="card">
+        <h3>Total Steps</h3>
+        <p id="totalSteps">0</p>
+    </div>
+    <div class="card">
+        <h3>Total Workout (mins)</h3>
+        <p id="totalMinutes">0</p>
+    </div>
+</section>
+
+<section class="activity-form">
+    <h2>Add Fitness Activity</h2>
+
+    <input type="text" id="activityName" placeholder="Activity Name (Running, Yoga...)">
+    
+    <select id="activityType">
+        <option value="Steps">Steps</option>
+        <option value="Workout">Workout</option>
+        <option value="Exercise">Exercise</option>
+    </select>
+
+    <input type="number" id="activityValue" placeholder="Steps / Minutes">
+    <input type="date" id="activityDate">
+
+    <button id="addActivityBtn">Add Activity</button>
+</section>
+
+<section class="activity-list">
+    <h2>My Activities</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Value</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="activityBody"></tbody>
+    </table>
+</section>
+
+<footer>
+    <p>© 2026 FitSphere | Stay Fit, Stay Strong 💪</p>
+</footer>
+
+<script src="fitsphere.js"></script>
+</body>
+</html>
